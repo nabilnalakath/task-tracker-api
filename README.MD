@@ -87,6 +87,11 @@ By default, the server will run on `http://localhost:3000`.
 
 ## API Endpoints
 
+- **GET /**: Check app status
+  - Response Example:
+    ```json
+    { "message":"App is running on port 3000" }
+    ```
 ### Task Endpoints
 
 - **POST /api/tasks**: Create a new task.
@@ -240,5 +245,5 @@ For more API details of endpoints and documentation, please refer to the [Swagge
 
 You can access the Swagger documentation to explore and test the API endpoints:
 
-- Swagger UI: [http://localhost:3000/api-docs](http://localhost:3000/api-docs)
-
+- Local server Swagger UI: [http://localhost:3000/api-docs](http://localhost:3000/api-docs)
+- Render deployed server Swagger UI: [https://task-tracker-api-2z5y.onrender.com/api-docs/](https://task-tracker-api-2z5y.onrender.com/api-docs/)
