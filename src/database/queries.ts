@@ -1,4 +1,3 @@
-
 import { NextFunction } from "express-serve-static-core";
 
 // Local imports
@@ -10,6 +9,6 @@ export const getTaskMetricsQuery = async (options: any) => {
     const metrics = await Task.findAll(options);
     return metrics;
   } catch (error) {
-     throw new CustomError(500, "Error fetching task metrics");
+    throw new CustomError(500, "Error fetching task metrics");
   }
 };

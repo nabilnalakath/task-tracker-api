@@ -3,17 +3,17 @@
     "target": "ES2019",
     "module": "CommonJS",
     "outDir": "./dist",
-    "rootDir": "./", 
+    "rootDir": "./",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "baseUrl": "./src", 
+    "baseUrl": "./src",
     "paths": {
       "*": ["types/*"]
     }
   },
-  "include": ["index.ts", "src/**/*.ts"], 
+  "include": ["index.ts", "src/**/*.ts"],
   "exclude": ["node_modules"]
 }

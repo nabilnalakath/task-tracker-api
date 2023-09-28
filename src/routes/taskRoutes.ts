@@ -1,12 +1,12 @@
 import { Router } from "express";
 import {
-    createTask,
-    getAllTasks,
-    updateTask,
+  createTask,
+  getAllTasks,
+  updateTask,
 } from "../controllers/taskController";
 import {
-    validateTaskCreation,
-    validateTaskUpdate,
+  validateTaskCreation,
+  validateTaskUpdate,
 } from "../middleware/validationMiddleware";
 
 const router = Router();

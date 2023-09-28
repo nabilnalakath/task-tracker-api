@@ -1,4 +1,3 @@
-
 import { DataTypes, Model } from "sequelize";
 import sequelize from "../config/database.config";
 
@@ -29,7 +28,7 @@ Task.init(
     status: {
       type: DataTypes.STRING,
       allowNull: false,
-    }
+    },
   },
   {
     sequelize,
