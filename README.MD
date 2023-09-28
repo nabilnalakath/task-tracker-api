@@ -3,7 +3,9 @@
 
 A TypeScript Node.js API project for managing tasks with a PostgreSQL database.
 
-You can find a live version of this project deployed using Render here - [https://task-tracker-api-2z5y.onrender.com/](https://task-tracker-api-2z5y.onrender.com/)
+You can find a live demo version of this project deployed using Render here - [https://task-tracker-api-2z5y.onrender.com/](https://task-tracker-api-2z5y.onrender.com/)
+
+In the live demo version, We are using a PostgreSQL database deployed on **AWS RDS**.
 
 `Note - Server may go down occasionally due to inactivity as it's on free tier`
 
