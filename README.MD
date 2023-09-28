@@ -58,10 +58,10 @@ Before you begin, ensure you have met the following requirements:
 2. Copy the `.env.example` file to `.env` and configure the database connection details:
 
    ```env
-   DATABASE_NAME=yourdb
-   DATABASE_USERNAME=yourusername
-   DATABASE_PASSWORD=yourpassword
-   DATABASE_HOST=localhost
+   DATABASE_NAME=yourdbname
+   DATABASE_USERNAME=yourdbusername
+   DATABASE_PASSWORD=yourdbpassword
+   DATABASE_HOST=yourdatabasehost
    DATABASE_PORT=5432
    ```
 
