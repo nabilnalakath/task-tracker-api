@@ -2,6 +2,8 @@
 # Task Tracker API
 
 A TypeScript Node.js API project for managing tasks with a PostgreSQL database.
+You can find a liver version of this project deployed using Render here - [https://task-tracker-api-2z5y.onrender.com/](https://task-tracker-api-2z5y.onrender.com/)
+Note - `Server may go occasionally down due to inactivity as it's on free tier`
 
 ## Table of Contents
 
