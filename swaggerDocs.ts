@@ -10,6 +10,10 @@ export const swaggerDocs = {
       url: "http://localhost:3000/api",
       description: "Local Dev server",
     },
+    {
+      url: "https://task-tracker-api-2z5y.onrender.com/api",
+      description: "Render Dev server",
+    },
   ],
   paths: {
     "/tasks": {
