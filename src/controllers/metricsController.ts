@@ -48,7 +48,7 @@ export const getTaskMetricsByMonth = async (req: Request, res: Response) => {
 
         const { month } = req.params;
         const validDate = new Date(month);
-        console.log('month', month);
+
         if (isNaN(validDate.getTime())) {
             return res.status(400).json(responseTransformer(FAILURE, {
                 error: 'Invalid month format'
@@ -71,7 +71,7 @@ export const getTaskMetricsByMonth = async (req: Request, res: Response) => {
         };
 
         const metrics: any = await getTaskMetricsQuery(metricsQuery);
-        console.log(metrics);
+
         if (!metrics || metrics.length === 0 || metrics[0].totalTasks === "0") {
             return res.status(404).json(responseTransformer(FAILURE, {
                 error: `No metrics found for the specified month ${month}`
@@ -102,7 +102,7 @@ export const getTaskMetricsGroupedByMonth = async (req: Request, res: Response) 
             ],
         };
         const metrics = await getTaskMetricsQuery(metricsQuery);
-        console.log(metrics);
+
         if (!metrics || metrics.length === 0) {
             return res.status(404).json(responseTransformer(FAILURE, {
                 error: 'No metrics found'
