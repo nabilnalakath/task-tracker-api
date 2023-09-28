@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
+console.log('process variables',process.env.DATABASE_NAME)
 export const sequelize = new Sequelize({
   database: process.env.DATABASE_NAME,
   username: process.env.DATABASE_USERNAME,
