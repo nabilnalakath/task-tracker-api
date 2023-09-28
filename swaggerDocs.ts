@@ -3,16 +3,17 @@ export const swaggerDocs = {
   info: {
     title: "Task Management API Documentation",
     version: "1.0.0",
-    description: "API documentation for managing tasks and getting metrics",
+    description: "API documentation for managing tasks and getting metrics. Switch between local dev server and deployed render server using the dropdown",
   },
   servers: [
     {
-      url: "http://localhost:3000/api",
       description: "Local Dev server",
+      url: "http://localhost:3000/api",
+
     },
     {
-      url: "https://task-tracker-api-2z5y.onrender.com/api",
       description: "Render Dev server",
+      url: "https://task-tracker-api-2z5y.onrender.com/api",
     },
   ],
   paths: {

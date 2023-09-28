@@ -5,16 +5,16 @@ import {
   getTaskMetricsGroupedByMonth,
 } from "../controllers/metricsController"; // Import the metrics controller
 
-const router: Router = express.Router();
+const metricsRouter: Router = express.Router();
 
 // Route to get all task metrics (ungrouped)
-router.get("/metrics", getAllTaskMetrics);
+metricsRouter.get("/metrics", getAllTaskMetrics);
 
 // Route to get task metrics grouped by month
 
-router.get("/metrics/grouped", getTaskMetricsGroupedByMonth);
+metricsRouter.get("/metrics/grouped", getTaskMetricsGroupedByMonth);
 
 // Route to get task metrics for a specific month
-router.get("/metrics/:month", getTaskMetricsByMonth);
+metricsRouter.get("/metrics/:month", getTaskMetricsByMonth);
 
-export default router;
+export default metricsRouter;

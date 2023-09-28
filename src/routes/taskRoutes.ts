@@ -9,15 +9,15 @@ import {
   validateTaskUpdate,
 } from "../middleware/validationMiddleware";
 
-const router = Router();
+const taskRouter = Router();
 
 // create a new route with validation middleware
-router.post("/tasks", validateTaskCreation, createTask);
+taskRouter.post("/tasks", validateTaskCreation, createTask);
 
 // Update Task Route with Validation Middleware
-router.put("/tasks/:taskId", validateTaskUpdate, updateTask);
+taskRouter.put("/tasks/:taskId", validateTaskUpdate, updateTask);
 
 // Get All Tasks with Pagination Route
-router.get("/tasks", getAllTasks);
+taskRouter.get("/tasks", getAllTasks);
 
-export default router;
+export default taskRouter;

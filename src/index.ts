@@ -13,11 +13,17 @@ import metricsRoutes from "./routes/metricsRoutes";
 
 dotenv.config();
 const app = express.default();
+const PORT = process.env.PORT || 3000;
 
 app.use(myParser.json({ limit: "10mb" }));
 app.use(myParser.urlencoded({ limit: "10mb", extended: true }));
 app.use(express.json());
 app.use(cors());
+
+// Default route to check app status
+app.get("/", (req, res) => {
+    res.status(200).json({ message: `App is running on port ${PORT}` });
+});
 
 // API Routes ------------------- Can be modified to different base endpoints for tasks and metrics if needed
 app.use("/api", taskRoutes);
@@ -28,17 +34,14 @@ app.use("/api-docs", serveSwaggerUI, setupSwaggerUI);
 
 app.use(errorHandler);
 
-// Start the Express server
-const PORT = process.env.PORT || 3000;
-
-// Initialize the database connection
+// Initialize the database connection and start the Express server
 sequelize
-  .sync()
-  .then(() => {
-    app.listen(PORT, () => {
-      console.log(`Server is running on port ${PORT}`);
+    .sync()
+    .then(() => {
+        app.listen(PORT, () => {
+            console.log(`Server is running on port ${PORT}`);
+        });
+    })
+    .catch((error) => {
+        console.error("Unable to connect to the database:", error);
     });
-  })
-  .catch((error) => {
-    console.error("Unable to connect to the database:", error);
-  });
