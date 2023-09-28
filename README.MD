@@ -55,7 +55,7 @@ Before you begin, ensure you have met the following requirements:
 
 1. Create a PostgreSQL database for the project. 
 
-2. Copy the `.env.example` file to `.env` and configure the database connection details:
+2. Copy the below `.env` file contents to your `.env` and configure the database connection details:
 
    ```env
    DATABASE_NAME=yourdbname
